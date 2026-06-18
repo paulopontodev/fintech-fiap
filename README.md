@@ -71,5 +71,5 @@ A tela foi construída para se adaptar a diferentes tamanhos de tela:
 - A interface mantém contraste, hierarquia e usabilidade em telas menores.
 
 ## Autor
-Paulo Roberto de Queiroz Junior.
+Paulo Roberto de Queiroz Junior.<br>
 Projeto acadêmico desenvolvido para a FIAP.
