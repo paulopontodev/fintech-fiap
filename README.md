@@ -1,5 +1,11 @@
 # Fintech Dashboard — FIAP
 
+## Demonstração
+
+Acesse a versão publicada do projeto:
+
+https://paulopontodev.github.io/fintech-fiap/
+
 Projeto desenvolvido para o desafio de criação de uma tela do projeto **Fintech**, utilizando **HTML**, **CSS separado** e **Tailwind CSS**.
 
 A proposta desta tela é apresentar um painel financeiro moderno, responsivo e visualmente coerente, com indicadores de saldo, receitas, despesas, transações recentes, meta de economia e resumo de gastos por categoria.
