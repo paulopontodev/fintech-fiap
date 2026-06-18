@@ -43,7 +43,7 @@ O layout foi redesenhado com uma linguagem mais moderna de fintech, mantendo a b
 ## Estrutura do projeto
 
 ```txt
-fintech-dashboard-fiap/
+fintech-fiap/
 ├── index.html
 ├── styles.css
 ├── README.md
