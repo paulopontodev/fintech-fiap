@@ -73,3 +73,4 @@ A tela foi construída para se adaptar a diferentes tamanhos de tela:
 ## Autor
 Paulo Roberto de Queiroz Junior.<br>
 Projeto acadêmico desenvolvido para a FIAP.
+
