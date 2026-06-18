@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dashboard financeiro responsivo desenvolvido para o projeto Fintech da FIAP." />
+  <title>Fintech Demo | Dashboard Financeiro</title>
+
+  <!-- Tailwind CSS via CDN sem etapa de build. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- CSS autoral separado para deixar o HTML mais limpo e legível. -->
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body class="page antialiased">
+  <main class="app mx-auto">
+    <header class="topbar">
+      <a class="brand" href="#dashboard" aria-label="Ir para o dashboard financeiro">
+        <span class="brand-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M3.5 10.5 12 3l8.5 7.5" />
+            <path d="M5.8 10.2v10.1h4.7v-5.4h3v5.4h4.7V10.2" />
+          </svg>
+        </span>
+
+        <span>
+          <strong>Fintech<span>.</span></strong>
+          <small>Personal finance dashboard</small>
+        </span>
+      </a>
+
+      <nav class="actions" aria-label="Ações principais">
+        <a class="button button-income" href="#receitas">↗ Nova Receita</a>
+        <a class="button button-expense" href="#despesas">↘ Nova Despesa</a>
+        <a class="button button-dark" href="#relatorios">▣ Relatórios</a>
+        <span class="avatar hidden sm:inline-flex">PQ</span>
+      </nav>
+    </header>
+
+    <section id="dashboard" class="hero-grid grid">
+      <article class="balance-card">
+        <div class="balance-content">
+          <div>
+            <p class="period-badge"><span></span>Abril 2026</p>
+            <p class="section-label">Saldo total</p>
+
+            <div class="balance-value">
+              <strong>••••••</strong>
+              <button class="icon-button" type="button" aria-label="Exibir saldo">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z" />
+                  <circle cx="12" cy="12" r="2.7" />
+                </svg>
+              </button>
+            </div>
+
+            <p class="growth-pill">↗ +12,5% este mês</p>
+          </div>
+
+          <aside class="cashflow-card" aria-label="Resumo do fluxo mensal">
+            <div class="cashflow-header">
+              <div>
+                <p>Fluxo mensal</p>
+                <strong>R$ 4.151</strong>
+              </div>
+              <span>positivo</span>
+            </div>
+
+            <div class="bar-chart" aria-hidden="true">
+              <span style="height: 42%"></span>
+              <span style="height: 68%"></span>
+              <span style="height: 52%"></span>
+              <span style="height: 76%"></span>
+              <span style="height: 46%"></span>
+              <span style="height: 88%"></span>
+              <span style="height: 63%"></span>
+            </div>
+          </aside>
+        </div>
+      </article>
+
+      <aside class="goal-card" aria-labelledby="meta-titulo">
+        <div class="goal-header">
+          <div>
+            <p class="section-label accent">Meta do mês</p>
+            <h1 id="meta-titulo">Economizar 67%</h1>
+            <p>Você está dentro do limite planejado para abril.</p>
+          </div>
+
+          <div class="progress-ring" aria-label="67% da meta mensal alcançada">
+            <span>67%</span>
+          </div>
+        </div>
+
+        <div class="goal-stats grid">
+          <div>
+            <small>Média diária</small>
+            <strong>R$ 68,30</strong>
+          </div>
+          <div>
+            <small>Transações</small>
+            <strong>5</strong>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="metrics-grid grid" aria-label="Indicadores financeiros">
+      <article class="metric-card">
+        <div>
+          <p>Saúde financeira</p>
+          <strong>Excelente</strong>
+        </div>
+        <span class="metric-icon purple">$</span>
+        <div class="progress-line"><span style="width: 82%"></span></div>
+      </article>
+
+      <article id="receitas" class="metric-card compact">
+        <span class="metric-icon green">↗</span>
+        <div>
+          <p>Receitas</p>
+          <strong>R$ 6.200</strong>
+          <small>Abril 2026</small>
+        </div>
+      </article>
+
+      <article id="despesas" class="metric-card compact">
+        <span class="metric-icon red">↘</span>
+        <div>
+          <p>Despesas</p>
+          <strong>R$ 2.049</strong>
+          <small>Abril 2026</small>
+        </div>
+      </article>
+    </section>
+
+    <section class="content-grid grid">
+      <article class="panel transactions-panel">
+        <div class="panel-header">
+          <div>
+            <p class="section-label accent">Últimos movimentos</p>
+            <h2>Transações recentes</h2>
+          </div>
+          <a href="#todas-transacoes">Ver todas</a>
+        </div>
+
+        <div class="transaction-list grid">
+          <article class="transaction income">
+            <span class="transaction-icon">↗</span>
+            <div class="transaction-info">
+              <strong>Salário</strong>
+              <small>Trabalho</small>
+            </div>
+            <div class="transaction-value">
+              <strong>+ R$ 5.000</strong>
+              <time datetime="2026-03-31">31/03/2026</time>
+            </div>
+          </article>
+
+          <article class="transaction expense">
+            <span class="transaction-icon">↘</span>
+            <div class="transaction-info">
+              <strong>Aluguel</strong>
+              <small>Moradia</small>
+            </div>
+            <div class="transaction-value">
+              <strong>- R$ 1.500</strong>
+              <time datetime="2026-04-04">04/04/2026</time>
+            </div>
+          </article>
+
+          <article class="transaction income">
+            <span class="transaction-icon">↗</span>
+            <div class="transaction-info">
+              <strong>Freelance</strong>
+              <small>Trabalho</small>
+            </div>
+            <div class="transaction-value">
+              <strong>+ R$ 1.200</strong>
+              <time datetime="2026-04-09">09/04/2026</time>
+            </div>
+          </article>
+
+          <article class="transaction expense">
+            <span class="transaction-icon">↘</span>
+            <div class="transaction-info">
+              <strong>Supermercado</strong>
+              <small>Alimentação</small>
+            </div>
+            <div class="transaction-value">
+              <strong>- R$ 450</strong>
+              <time datetime="2026-04-11">11/04/2026</time>
+            </div>
+          </article>
+
+          <article class="transaction expense">
+            <span class="transaction-icon">↘</span>
+            <div class="transaction-info">
+              <strong>Internet</strong>
+              <small>Contas</small>
+            </div>
+            <div class="transaction-value">
+              <strong>- R$ 99</strong>
+              <time datetime="2026-04-14">14/04/2026</time>
+            </div>
+          </article>
+        </div>
+      </article>
+
+      <aside id="relatorios" class="panel summary-panel">
+        <div class="panel-header">
+          <div>
+            <p class="section-label accent">Relatório</p>
+            <h2>Resumo financeiro</h2>
+          </div>
+        </div>
+
+        <div class="summary-list grid">
+          <div class="summary-row">
+            <span>Transações este mês</span>
+            <strong>5</strong>
+          </div>
+          <div class="summary-row">
+            <span>Média diária de gastos</span>
+            <strong>R$ 68,30</strong>
+          </div>
+          <div class="summary-row success">
+            <span>Economia no mês</span>
+            <strong>67%</strong>
+          </div>
+        </div>
+
+        <hr />
+
+        <h3>Gastos por categoria</h3>
+
+        <div class="category-list grid">
+          <div class="category-item">
+            <div>
+              <span>Moradia</span>
+              <strong>73%</strong>
+            </div>
+            <div class="progress-line"><span style="width: 73%"></span></div>
+          </div>
+
+          <div class="category-item">
+            <div>
+              <span>Alimentação</span>
+              <strong>22%</strong>
+            </div>
+            <div class="progress-line"><span style="width: 22%"></span></div>
+          </div>
+
+          <div class="category-item">
+            <div>
+              <span>Contas</span>
+              <strong>5%</strong>
+            </div>
+            <div class="progress-line"><span style="width: 5%"></span></div>
+          </div>
+        </div>
+      </aside>
+    </section>
+  </main>
+</body>
+</html>
