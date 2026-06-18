@@ -2,10 +2,9 @@
 
 ## Demonstração
 
-Acesse a versão publicada do projeto:
+Acesse a versão publicada do projeto: <br>
 https://paulopontodev.github.io/fintech-fiap/ 
 
-<br>
 
 Projeto desenvolvido para o desafio de criação de uma tela do projeto **Fintech**, utilizando **HTML**, **CSS separado** e **Tailwind CSS**.
 
