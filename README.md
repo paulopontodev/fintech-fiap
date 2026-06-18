@@ -3,7 +3,6 @@
 ## Demonstração
 
 Acesse a versão publicada do projeto:
-
 https://paulopontodev.github.io/fintech-fiap/ 
 
 <br>
